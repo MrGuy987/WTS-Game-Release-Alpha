@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    font-family: monospace;
+    background: #222;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
+    background: url('images/bg3.png') no-repeat center/cover;
+  }
+
+  #player {
+    position: absolute;
+    bottom: 75px;
+    left: 200px;
+    width: 150px;
+    height: 150px;
+    background-image: url('images/Player.png'); /* your player sprite */
+    background-size: cover;
+    transition: left 1.5s ease-in-out;
+}
+
+@keyframes walk-right {
+    0% {
+        left: 200px;
+    }
+    100% {
+        left: 90%;
+    }
+}
+
+.walk-right {
+    animation: walk-right 1.5s ease-in-out forwards; /* run the animation */
+}
+
+  .typewriter {
+    font-family: monospace;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    width: fit-content;
+    overflow: hidden;
+    white-space: normal;
+    width: 600px;
+    position: relative;
+    left: 125px;
+    top: -100px;
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+  }
+  
+  .primary-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.25s ease, transform 0.2s ease;
+    position: absolute;
+    left: 1000px;
+    top: 600px;
+  }
+  
+  .primary-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  .primary-btn:active {
+    transform: translateY(0);
+    background-color: #0052a9;
+  }
+  
+  .primary-btn:focus {
+    outline: 3px solid #80bdff;
+    outline-offset: 2px;
+  }
+  
+  .typewriter {
+    backdrop-filter: blur(15px);
+    padding: 10px;
+    border-radius: 20px;
+  }

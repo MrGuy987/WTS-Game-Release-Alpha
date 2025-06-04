@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RPG Battle #5</title>
+  <link rel="stylesheet" href="f5 styles.css" />
+  <link rel="icon" type="image/x-icon" href="images/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="battle">
+    <!-- Player -->
+    <div id="player" class="sprite">
+    </div>
+    <h3></h3>
+    <h1>Boss Match</h1>
+    <!-- Enemy 1 (Snake) -->
+    <div id="snakeContainer" class="enemy-container" onclick="dealDamageToEnemy('snake', 999)">
+      <img src="images/enemy1.png" class="enemy" id="snake" />
+      <div class="enemy-health-bar">
+        <div id="snakeHealth" class="health-bar"></div>
+      </div>
+    </div>
+
+    <!-- Enemy 2 (Lizard) -->
+    <div id="lizardContainer" class="enemy-container" onclick="dealDamageToEnemy('lizard', 999)">
+      <img src="images/Cardenage.png" class="enemy" id="lizard" />
+      <div class="enemy-health-bar">
+        <div id="lizardHealth" class="health-bar"></div>
+      </div>
+    </div>
+    <!-- Enemy 3 (Dragon) -->
+<div id="dragonContainer" class="enemy-container" onclick="dealDamageToEnemy('dragon', 999)">
+    <img src="images/enemy1.png" class="enemy" id="dragon" />
+    <div class="enemy-health-bar">
+      <div id="dragonHealth" class="health-bar"></div>
+    </div>
+  </div>
+  
+    <!-- Action Buttons -->
+    <div id="ui">
+      <button onclick="castFire()">🗡 Sword</button>
+      <button onclick="drinkPotion()">🧪 Healing Potion</button>
+      <button onclick="defend()">🛡️ Defend</button>
+      <button class="blade-of-the-ancients" onclick="bladeOfTheAncients()">⚔️ Blade of the Ancients</button>
+    </div>
+
+    <!-- Player Stats -->
+    <div id="stats">
+      <div>HP: <span id="hpText">300</span>/300</div>
+      <div class="bar-container"><div id="hpBar" class="bar green"></div></div>
+      <div>MP: <span id="mpText">125</span>/125</div>
+      <div class="bar-container"><div id="mpBar" class="bar pink"></div></div>
+      <div id="battleLog" class="log-box"></div>
+    </div>
+  </div>
+
+  <script src="f5 script.js"></script>
+</body>
+</html>

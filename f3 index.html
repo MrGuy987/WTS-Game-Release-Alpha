@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>RPG Battle #3</title>
+  <link rel="stylesheet" href="f3 styles.css" />
+  <link rel="icon" type="image/x-icon" href="images/logo.png">
+</head>
+<body>
+  <div id="battle">
+    <!-- Player -->
+    <div id="player" class="sprite">
+    </div>
+
+    <!-- Enemy 1 (Snake) -->
+    <div id="snakeContainer" class="enemy-container" onclick="dealDamageToEnemy('snake', 999)">
+      <img src="images/Rage Beast.png" class="enemy" id="snake" />
+      <div class="enemy-health-bar">
+        <div id="snakeHealth" class="health-bar"></div>
+      </div>
+    </div>
+
+    <!-- Enemy 2 (Lizard) -->
+    <div id="lizardContainer" class="enemy-container" onclick="dealDamageToEnemy('lizard', 999)">
+      <img src="images/enemy1.png" class="enemy" id="lizard" />
+      <div class="enemy-health-bar">
+        <div id="lizardHealth" class="health-bar"></div>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div id="ui">
+      <button onclick="castFire()">🗡 Sword</button>
+      <button onclick="drinkPotion()">🧪 Healing Potion</button>
+      <button onclick="defend()">🛡️ Defend</button>
+      <button class="blade-of-the-ancients" onclick="bladeOfTheAncients()">⚔️ Blade of the Ancients</button>
+    </div>
+
+    <!-- Player Stats -->
+    <div id="stats">
+      <div>HP: <span id="hpText">200</span>/200</div>
+      <div class="bar-container"><div id="hpBar" class="bar green"></div></div>
+      <div>MP: <span id="mpText">100</span>/100</div>
+      <div class="bar-container"><div id="mpBar" class="bar pink"></div></div>
+      <div id="battleLog" class="log-box"></div>
+    </div>
+  </div>
+
+  <script src="f3 script.js"></script>
+</body>
+</html>
